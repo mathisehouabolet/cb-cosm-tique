@@ -1,26 +1,231 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+  themes: cbcosmétique --default;
+}
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@plugin "daisyui/theme" {
+  name: "cbcosmétique";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #fbf7f0;
+  --color-base-200: #f3ebe0;
+  --color-base-300: #e6d9c8;
+  --color-base-content: #2c1810;
+
+  --color-primary: #4b2c20;
+  --color-primary-content: #f7f2ea;
+
+  --color-secondary: #a68129;
+  --color-secondary-content: #fbf7f0;
+
+  --color-accent: #c9a227;
+  --color-accent-content: #2c1810;
+
+  --color-neutral: #3d2418;
+  --color-neutral-content: #f7f2ea;
+
+  --color-info: #7a6a4f;
+  --color-info-content: #fbf7f0;
+  --color-success: #5c6b4a;
+  --color-success-content: #fbf7f0;
+  --color-warning: #c9a227;
+  --color-warning-content: #2c1810;
+  --color-error: #8b3a2f;
+  --color-error-content: #fbf7f0;
+
+  --radius-selector: 1rem;
+  --radius-field: 0.125rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-outfit);
+  --color-ochre: #a68129;
+  --color-cocoa: #4b2c20;
+  --color-gold: #c9a227;
+  --color-cream: #fbf7f0;
+  --color-ivory: #f7f2ea;
+  --color-espresso: #2c1810;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --brand-ochre: #a68129;
+  --brand-cocoa: #4b2c20;
+  --brand-gold: #c9a227;
+  --brand-cream: #fbf7f0;
+  --brand-ivory: #f7f2ea;
+  --brand-espresso: #2c1810;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--brand-cream);
+  color: var(--brand-espresso);
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--brand-ochre) 35%, transparent);
+  color: var(--brand-espresso);
+}
+
+.font-display {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.hook {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--brand-ochre);
+}
+
+.glass-panel {
+  background: color-mix(in srgb, var(--brand-cream) 72%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid color-mix(in srgb, var(--brand-gold) 28%, transparent);
+}
+
+.bg-overlay {
+  background:
+    linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--brand-cocoa) 78%, transparent) 0%,
+      color-mix(in srgb, var(--brand-ochre) 55%, transparent) 55%,
+      color-mix(in srgb, var(--brand-cocoa) 72%, transparent) 100%
+    );
+}
+
+.bg-overlay-soft {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--brand-cream) 88%, transparent) 0%,
+      color-mix(in srgb, var(--brand-cream) 70%, transparent) 100%
+    );
+}
+
+.gold-line {
+  height: 1px;
+  width: 4rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--brand-gold),
+    transparent
+  );
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.product-card {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 24px 48px color-mix(in srgb, var(--brand-cocoa) 14%, transparent);
+}
+
+.product-card img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-card:hover img {
+  transform: scale(1.06);
+}
+
+.btn-brand {
+  background: var(--brand-cocoa);
+  color: var(--brand-ivory);
+  border: 1px solid var(--brand-cocoa);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.35s ease;
+}
+
+.btn-brand:hover {
+  background: var(--brand-ochre);
+  border-color: var(--brand-gold);
+  color: var(--brand-cream);
+}
+
+.btn-brand-outline {
+  background: transparent;
+  color: var(--brand-ivory);
+  border: 1px solid color-mix(in srgb, var(--brand-gold) 65%, white);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.35s ease;
+}
+
+.btn-brand-outline:hover {
+  background: color-mix(in srgb, var(--brand-gold) 18%, transparent);
+  border-color: var(--brand-gold);
+  color: white;
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-soft {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+.noise-texture::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
