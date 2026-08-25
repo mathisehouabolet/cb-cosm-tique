@@ -108,13 +108,6 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/#collection"
-              className="btn btn-brand mt-2"
-              onClick={() => setOpen(false)}
-            >
-              Découvrir nos soins
-            </Link>
           </div>
         </div>
       )}

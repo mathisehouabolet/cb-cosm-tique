@@ -20,20 +20,20 @@ export function StrengthsBar() {
   ];
 
   return (
-    <section className="bg-gradient-to-r from-[#f4d4e6] to-[#ffc0d9] py-16 md:py-20">
+    <section className="bg-[#4b2c20] py-16 text-[#f7f2ea] md:py-20">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {strengths.map((strength, i) => {
             const Icon = strength.icon;
             return (
               <div key={i} className="flex flex-col items-center text-center">
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#2c1810]/10">
-                  <Icon className="h-8 w-8 text-[#2c1810]" />
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#f7f2ea]/10">
+                  <Icon className="h-8 w-8 text-[#f7f2ea]" />
                 </div>
-                <h3 className="mb-2 font-display text-lg font-semibold text-[#2c1810]">
+                <h3 className="mb-2 font-display text-lg font-semibold text-[#f7f2ea]">
                   {strength.title}
                 </h3>
-                <p className="text-sm text-[#2c1810]/80">
+                <p className="text-sm text-[#f7f2ea]/80">
                   {strength.description}
                 </p>
               </div>
