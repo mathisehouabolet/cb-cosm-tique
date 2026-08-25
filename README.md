@@ -14,6 +14,8 @@ BREVO_LIST_ID=your-brevo-list-id
 
 In Brevo, create a contact list, copy its numeric ID into `BREVO_LIST_ID`, and create an API key with permission to manage contacts. The newsletter form posts to `/api/newsletter/subscribe`; the Brevo key stays server-side.
 
+For production, add `BREVO_API_KEY` and `BREVO_LIST_ID` to the deployment platform's environment variables, then redeploy the site. The local `.env.local` file is not deployed.
+
 ## Getting Started
 
 First, run the development server:

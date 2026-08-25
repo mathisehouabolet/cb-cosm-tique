@@ -43,7 +43,10 @@ export function NewsletterModal() {
         body: JSON.stringify({ email, consent, website }),
       });
 
-      if (!response.ok) throw new Error("Newsletter subscription failed");
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.error || "Newsletter subscription failed");
+      }
 
       setStatus("success");
       setEmail("");

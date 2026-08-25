@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const runtime = "nodejs";
+
 const brevoApiKey = process.env.BREVO_API_KEY;
 const brevoListId = Number(process.env.BREVO_LIST_ID);
 
@@ -51,9 +53,18 @@ export async function POST(request: Request) {
     });
 
     if (!brevoResponse.ok) {
-      console.error("Brevo newsletter error:", brevoResponse.status);
+      const brevoError = await brevoResponse.text();
+      console.error("Brevo newsletter error:", {
+        status: brevoResponse.status,
+        response: brevoError,
+      });
       return NextResponse.json(
-        { error: "Impossible de finaliser l'inscription pour le moment." },
+        {
+          error:
+            brevoResponse.status === 400
+              ? "La configuration de la newsletter est incorrecte."
+              : "Impossible de finaliser l'inscription pour le moment.",
+        },
         { status: 502 },
       );
     }
