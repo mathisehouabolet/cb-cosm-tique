@@ -11,9 +11,16 @@ const featured = products.filter((p) => p.featured);
 
 export function FeaturedCarousel() {
   const [index, setIndex] = useState(0);
-  const product = featured[index];
+
+  if (featured.length === 0) {
+    return null;
+  }
+
+  const product = featured[index % featured.length];
 
   useEffect(() => {
+    if (featured.length <= 1) return;
+
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % featured.length);
     }, 6500);

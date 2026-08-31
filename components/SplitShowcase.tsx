@@ -5,10 +5,14 @@ import Link from "next/link";
 import { products } from "@/lib/catalog";
 import { Reveal } from "./Reveal";
 
-const spotlight = products.find((p) => p.id === "huile-chebe")!;
-const secondary = products.find((p) => p.id === "savon-noir")!;
+const spotlight = products.find((p) => p.id === "huile-chebe");
+const secondary = products.find((p) => p.id === "savon-noir");
 
 export function SplitShowcase() {
+  if (!spotlight || !secondary) {
+    return null;
+  }
+
   return (
     <section className="bg-[#fbf7f0]">
       <div className="grid lg:grid-cols-2">
