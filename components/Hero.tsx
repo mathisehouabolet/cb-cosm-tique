@@ -10,7 +10,7 @@ export function Hero() {
       className="relative flex min-h-[100svh] items-end overflow-hidden noise-texture"
     >
       <Image
-        src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=2000&q=80"
+        src="/img/hero.png"
         alt="Soins naturels CB COSMÉTIQUE"
         fill
         priority

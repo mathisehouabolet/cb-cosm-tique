@@ -32,7 +32,7 @@ export const products: Product[] = [
       "Apaise les peaux sèches",
       "Élasticité et souplesse",
     ],
-    image: "/products/01-beurre-karite.jpeg",
+    image: "/products/001-beurre-karite.jpeg",
     featured: true,
   },
   {
@@ -49,7 +49,7 @@ export const products: Product[] = [
       "Nutrition profonde",
       "Toucher velouté",
     ],
-    image: "/products/02-beurre-cacao.png",
+    image: "/products/002-beurre-cacao.png",
   },
   {
     id: "chantilly-karite",
@@ -69,7 +69,7 @@ export const products: Product[] = [
       "Hydratation longue durée",
       "Sensation de confort",
     ],
-    image: "/products/03-chantilly-karite.png",
+    image: "/products/003-chantilly-karite.png",
     featured: true,
   },
   {
@@ -90,7 +90,7 @@ export const products: Product[] = [
       "Force et résistance",
       "Brillance naturelle",
     ],
-    image: "/products/04-huile-chebe.jpg",
+      image: "/products/004-huile-chebe.png",
     featured: true,
   },
   {
@@ -111,7 +111,7 @@ export const products: Product[] = [
       "Nutrition sans résidu",
       "Protection de la fibre",
     ],
-    image: "/products/05-creme-capillaire.png",
+    image: "/products/005-creme-capillaire.png",
   },
   {
     id: "spray-capillaire",
@@ -131,11 +131,11 @@ export const products: Product[] = [
       "Démêlage facile",
       "Éclat quotidien",
     ],
-    image: "/products/06-spray-capillaire.jpg",
+    image: "/products/006-spray-capillaire.jpg",
   },
   {
     id: "savon-noir",
-    name: "Savon noir d'Afrique",
+    name: "Savon noir d'Afrique mélangé aux huiles et aux poudres naturelles",
     shortName: "Savon noir",
     category: "Savons",
     tagline: "Purification authentique, héritage africain",
@@ -151,13 +151,13 @@ export const products: Product[] = [
       "Teint unifié",
       "Peau douce et nette",
     ],
-    image: "/products/07-savon-noir.png",
+    image: "/products/008-savon-noir-enrichi.png",
     featured: true,
   },
   {
     id: "savon-noir-huiles",
-    name: "Savon noir mélangé aux huiles et aux poudres naturelles",
-    shortName: "Savon noir enrichi",
+    name: "Savon noir mélangé",
+    shortName: "Savon noir enrichie aux huiles et aux poudres",
     category: "Savons",
     tagline: "L'alliance du savon noir et de la nature",
     description:
@@ -172,7 +172,7 @@ export const products: Product[] = [
       "Texture sensorielle",
       "Peau confortée",
     ],
-    image: "/products/08-savon-noir-enrichi.png",
+    image: "/products/007-savon-enrichi.png",
   },
 ];
 
@@ -189,7 +189,7 @@ export const blogPosts = [
     title: "Le rituel parfait au beurre de karité",
     excerpt:
       "Comment intégrer le beurre de karité pur dans votre routine pour une peau sublimée.",
-    image: "/products/01-beurre-karite.jpeg",
+    image: "/products/001-beurre-karite.jpeg",
     date: "12 juin 2026",
   },
   {
@@ -197,15 +197,15 @@ export const blogPosts = [
     title: "Les secrets millénaires de l'huile de chébé",
     excerpt:
       "Découvrez pourquoi cette huile africaine est l'alliée des cheveux longs et résilients.",
-    image: "/products/04-huile-chebe.jpg",
+    image: "/products/004-huile-chebe.png",
     date: "28 mai 2026",
   },
   {
-    slug: "savon-noir",
+    slug: "savon-noir ",
     title: "Savon noir : le geste fondateur de beauté",
     excerpt:
       "Origine, bienfaits et mode d'emploi d'un classique incontournable des soins naturels.",
-    image: "/products/07-savon-noir.png",
+    image: "/products/007-savon-noir.png",
     date: "4 mai 2026",
   },
 ];

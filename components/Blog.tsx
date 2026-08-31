@@ -13,7 +13,7 @@ export function Blog() {
         <Reveal className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-xl">
             <p className="section-label mb-4">Conseils beauté</p>
-            <h2 className="hook text-4xl text-[#4b2c20] md:text-5xl">
+            <h2 className="hook text-4xl text-cocoa md:text-5xl">
               Beauté, nature et savoir-faire.
             </h2>
           </div>

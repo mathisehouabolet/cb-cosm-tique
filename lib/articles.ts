@@ -23,7 +23,7 @@ export const articles: Article[] = [
     subtitle: "Le trésor naturel pour cheveux et peau",
     excerpt:
       "Découvrez les propriétés nourrissantes du beurre de karité pur et les meilleures façons de l'intégrer à vos rituels beauté.",
-    image: "/products/01-beurre-karite.jpeg",
+    image: "/products/001-beurre-karite.jpeg",
     date: "12 juin 2026",
     sections: [
       {
@@ -135,7 +135,7 @@ export const articles: Article[] = [
     subtitle: "Le secret ancestral des femmes du Tchad pour une chevelure longue et épaisse",
     excerpt:
       "Découvrez l'histoire du chébé, ses bienfaits pour la rétention de longueur et les gestes essentiels pour l'intégrer à votre routine capillaire.",
-    image: "/products/04-huile-chebe.jpg",
+    image: "/products/004-huile-chebe.png",
     date: "28 mai 2026",
     sections: [
       {
@@ -293,7 +293,7 @@ export const articles: Article[] = [
     subtitle: "Le trésor multi-usage du hammam pour peau et cheveux",
     excerpt:
       "Découvrez le savon noir cosmétique, ses bienfaits purifiants et les gestes traditionnels du hammam pour la peau et les cheveux.",
-    image: "/products/07-savon-noir.png",
+    image: "/products/007-savon-noir.png",
     date: "4 mai 2026",
     sections: [
       {

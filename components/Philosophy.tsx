@@ -8,7 +8,7 @@ const pillars = [
   {
     icon: Leaf,
     title: "Ingrédients purs",
-    text: "Karité, cacao, chébé et plantes africaines sélectionnés avec exigence.",
+    text: "Beurres naturelles de Karité, de Cacao, de mangue, poudres ayurvediques, poudres cosmétiques naturelles (Chébé, Neem, Henné …), huiles naturelles, savon noirs africains, acides de fruits…",
   },
   {
     icon: Droplets,
@@ -56,7 +56,7 @@ export function Philosophy() {
               savoir-faire artisanal.
             </p>
             <p className="text-base leading-relaxed text-[#4b2c20]/70">
-              Chaque formule est pensée pour nourrir, protéger et révéler —
+              Chaque formule est pensée pour nourrir, protéger et révéler votre beauté naturelle,
               parce que votre peau mérite le meilleur de la nature.
             </p>
           </Reveal>
@@ -66,8 +66,8 @@ export function Philosophy() {
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[#a68129]/30 to-[#4b2c20]/20 blur-2xl" />
               <div className="relative overflow-hidden rounded-[1.5rem]">
                 <Image
-                  src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80"
-                  alt="Rituel de beauté naturelle"
+                  src="/img/philosophy.jpg"
+                  alt="Femme noire prenant soin de ses cheveux"
                   width={900}
                   height={1100}
                   className="h-[28rem] w-full object-cover md:h-[34rem]"

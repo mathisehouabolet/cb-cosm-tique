@@ -73,7 +73,7 @@ export function Products() {
             Découvrez la puissance des actifs naturels.
           </h2>
           <p className="text-base text-[#4b2c20]/70 md:text-lg">
-            Huit soins d&apos;exception pour la peau et les cheveux — purs,
+            Huit soins;exception pour la peau et les cheveux — purs,
             sensoriels, irrésistibles.
           </p>
         </Reveal>

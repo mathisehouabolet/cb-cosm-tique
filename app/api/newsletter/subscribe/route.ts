@@ -1,9 +1,7 @@
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
-
-const brevoApiKey = process.env.BREVO_API_KEY;
-const brevoListId = Number(process.env.BREVO_LIST_ID);
+export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
@@ -29,6 +27,9 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     }
+
+    const brevoApiKey = process.env.BREVO_API_KEY;
+    const brevoListId = Number(process.env.BREVO_LIST_ID);
 
     if (!brevoApiKey || !Number.isInteger(brevoListId) || brevoListId < 1) {
       return NextResponse.json(
