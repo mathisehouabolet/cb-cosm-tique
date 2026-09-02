@@ -47,11 +47,22 @@ export const metadata: Metadata = {
   title: "CB COSMÉTIQUE — Beauté naturelle de luxe",
   description:
     "Beurre de karité, beurre de cacao, huile de chébé, savon noir d'Afrique — soins naturels premium par CB COSMÉTIQUE.",
+  icons: {
+    icon: "public/Logo.png",
+    shortcut: "public/Logo.png",
+    apple: "public/Logo.png",
+  },
   openGraph: {
     title: "CB COSMÉTIQUE",
     description: "Révélez votre beauté naturelle.",
     images: ["/logo.png"],
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -65,7 +76,7 @@ export default function RootLayout({
       data-theme="cbcosmétique"
       className={`${cormorant.variable} ${outfit.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="flex min-h-screen min-h-[100dvh] flex-col font-sans">
         <StructuredData data={structuredData} />
         {children}
         <NewsletterModal />

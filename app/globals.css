@@ -66,10 +66,14 @@
 }
 
 html {
+  height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: 100svh;
   background: var(--brand-cream);
   color: var(--brand-espresso);
   font-family: var(--font-outfit), system-ui, sans-serif;
