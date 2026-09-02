@@ -12,12 +12,6 @@ const featured = products.filter((p) => p.featured);
 export function FeaturedCarousel() {
   const [index, setIndex] = useState(0);
 
-  if (featured.length === 0) {
-    return null;
-  }
-
-  const product = featured[index % featured.length];
-
   useEffect(() => {
     if (featured.length <= 1) return;
 
@@ -26,6 +20,12 @@ export function FeaturedCarousel() {
     }, 6500);
     return () => clearInterval(id);
   }, []);
+
+  if (featured.length === 0) {
+    return null;
+  }
+
+  const product = featured[index % featured.length];
 
   const prev = () => setIndex((i) => (i - 1 + featured.length) % featured.length);
   const next = () => setIndex((i) => (i + 1) % featured.length);

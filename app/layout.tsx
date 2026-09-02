@@ -44,13 +44,14 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "CB COSMÉTIQUE — Beauté naturelle de luxe",
   description:
     "Beurre de karité, beurre de cacao, huile de chébé, savon noir d'Afrique — soins naturels premium par CB COSMÉTIQUE.",
   icons: {
-    icon: "public/Logo.png",
-    shortcut: "public/Logo.png",
-    apple: "public/Logo.png",
+    icon: "/Logo.png",
+    shortcut: "/Logo.png",
+    apple: "/Logo.png",
   },
   openGraph: {
     title: "CB COSMÉTIQUE",

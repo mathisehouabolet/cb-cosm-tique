@@ -131,7 +131,7 @@ export const products: Product[] = [
       "Démêlage facile",
       "Éclat quotidien",
     ],
-    image: "/products/006-spray-capillaire.jpg",
+    image: "/products/006-spray-capillair.png",
   },
   {
     id: "savon-noir",
@@ -201,11 +201,11 @@ export const blogPosts = [
     date: "28 mai 2026",
   },
   {
-    slug: "savon-noir ",
+    slug: "savon-noir",
     title: "Savon noir : le geste fondateur de beauté",
     excerpt:
       "Origine, bienfaits et mode d'emploi d'un classique incontournable des soins naturels.",
-    image: "/products/007-savon-noir.png",
+    image: "/products/008-savon-noir-enrichi.png",
     date: "4 mai 2026",
   },
 ];
