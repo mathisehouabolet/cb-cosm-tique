@@ -77,6 +77,18 @@ export default function RootLayout({
       data-theme="cbcosmétique"
       className={`${cormorant.variable} ${outfit.variable} h-full scroll-smooth antialiased`}
     >
+      {/* Fallback sans JS : framer-motion injecte opacity:0 dans le HTML SSR.
+          Sans JavaScript, ces styles restent figés. Ce bloc <noscript> les
+          réinitialise pour que le contenu reste visible. */}
+      <noscript>
+        <style>{`
+          [style*="opacity: 0"],
+          [style*="opacity:0"] {
+            opacity: 1 !important;
+            transform: none !important;
+          }
+        `}</style>
+      </noscript>
       <body className="flex min-h-screen min-h-[100dvh] flex-col font-sans">
         <StructuredData data={structuredData} />
         {children}
